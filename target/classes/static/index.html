@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SMS and Email</title>
+    <link rel="stylesheet" type="text/css" href="SpringUI.css">
+    <script type="text/javascript" src="SpringUI.js"></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="body_onload()">
+    <div id="vue3">
+            <div class="welcomeDiv">
+                <label id="lblWelcome">Welcome</label>
+                <label id="lblSelect">Send SMS or Email</label>
+                <button id="btnChooseSMS" v-on:click="btnChooseSMS_onclick">SMS</button>
+                <button id="btnChooseEmail" v-on:click="btnChooseEmail_onclick">Email</button>
+            </div>
+
+        <transition name="fade">
+            <div class="smsDiv" v-if="showSMS">
+                <label id="lblSendSMS">Send SMS</label>
+                <label id="lblToNumber">Recipient Phone Number:</label>
+                <input type="text" id="toNumber" v-model="toPhone"/>
+                <label id="lblSmsMessage">Message:</label>
+                <textarea id="smsMessageArea" cols="25" rows="6" v-model="smsMessage"></textarea>
+                <button id="btnSmsSend" v-on:click="btnSmsSend_onclick">Send SMS</button>
+                <button id="btnSmsCancel" v-on:click="btnSmsCancel_onclick">Cancel</button>
+            </div>
+        </transition>
+
+        <transition name="fade">
+            <div class="emailDiv" v-if="showEmail">
+                <label id="lblSendEmail">Send Email</label>
+                <label id="lblRecipientEmail">Recipient Email:</label>
+                <input type="text" id="recipientEmail" v-model="recipientEmail"/>
+                <label id="lblSenderEmail">Sender Email:</label>
+                <input type="text" id="senderEmail" v-model="senderEmail"/>
+                <label id="lblPassword">Password:</label>
+                <input type="password" id="emailPassword" v-model="emailPassword"/>
+                <label id="lblSubject">Subject:</label>
+                <input type="text" id="emailSubject" v-model="emailSubject"/>
+                <label id="lblEmailMessage">Message:</label>
+                <textarea id="emailMessageArea" cols="25" rows="6" v-model="emailMessage"></textarea>
+                <button id="btnEmailSend" v-on:click="btnEmailSend_onclick">Send Email</button>
+                <button id="btnEmailCancel" v-on:click="btnEmailCancel_onclick">Cancel</button>
+            </div>
+        </transition>
+    </div>
+
+</body>
+</html>

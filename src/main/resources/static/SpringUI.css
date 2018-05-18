@@ -1,0 +1,273 @@
+﻿body {
+    font-family:sans-serif;
+    background-color: #556;
+}
+button {
+    border-radius: 8px;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background-color: lightblue;
+}
+
+/* Welcome Div */
+
+.welcomeDiv {
+    position: relative;
+    border: 2px solid black;
+    background: #ffffff;
+    width: 250px;
+    height: 225px;
+    margin: 20px;
+    padding: 10px;
+    display: block;
+}
+
+#lblWelcome {
+    position: absolute;
+    top: 15px;
+    height: 30px;
+    left: 22.5%;
+    text-align: right;
+    font-family: Sans-Serif;
+    font-size: 36px;
+}
+
+#lblSelect {
+    position: absolute;
+    top: 55px;
+    height: 30px;
+    left: 18%;
+    text-align: right;
+    font-family: Sans-Serif;
+    font-size: 20px;
+}
+
+#btnChooseSMS {
+    position: absolute;
+    top: 115px;
+    left: 21.5%;
+    height: 25px;
+    width: 150px;
+    font-size: 18px;
+}
+
+#btnChooseEmail {
+    position: absolute;
+    top: 170px;
+    left: 21.5%;
+    height: 25px;
+    width: 150px;
+    font-size: 18px;
+}
+
+
+/* SMS Div */
+
+.smsDiv {
+    position: relative;
+    border: 2px solid black;
+    background: #ffffff;
+    width: 500px;
+    height: 225px;
+    margin: 20px;
+    padding: 10px;
+    display: block;
+}
+
+#lblSendSMS {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    height: 30px;
+    text-align: right;
+    font-family: Sans-Serif;
+    font-size: 30px;
+}
+
+#lblToNumber {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    font-size: 18px;
+}
+
+#toNumber {
+    position: absolute;
+    font: inherit;
+    top: 60px;
+    left: 240px;
+}
+
+#lblSmsMessage {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    font-size: 18px;     
+}
+
+#smsMessageArea {
+    position: absolute;
+    font: inherit;
+    top: 120px;
+    left: 10px;
+    width: 300px;
+    resize: none;
+}
+
+#btnSmsSend {
+    position: absolute;
+    top: 180px;
+    left: 350px;
+    height: 25px;
+    width: 150px;
+    font-size: 18px;
+}
+
+#btnSmsCancel {
+    position: absolute;
+    top: 210px;
+    left: 350px;
+    height: 25px;
+    width: 150px;
+    font-size: 18px;
+}
+
+/* Email Div */
+
+.emailDiv {
+    position: relative;
+    border: 2px solid black;
+    background: #ffffff;
+    width: 680px;
+    height: 275px;
+    margin: 20px;
+    padding: 10px;
+    display: block;
+}
+
+#lblSendEmail {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    height: 30px;
+    text-align: right;
+    font-family: Sans-Serif;
+    font-size: 30px;
+}
+
+#lblRecipientEmail {
+    position: absolute;
+    font-size: 18px;
+    top: 67px;
+    left: 10px;
+}
+
+#recipientEmail {
+    position: absolute;
+    font: inherit;
+    top: 65px;
+    left: 150px;
+}
+
+#lblSenderEmail {
+    position: absolute;
+    font-size: 18px;
+    top: 67px;
+    left: 360px;
+}
+
+#senderEmail {
+    position: absolute;
+    font: inherit;
+    top: 65px;
+    left: 480px;
+}
+
+#lblPassword {
+    position: absolute;
+    font-size: 18px;
+    top: 100px;
+    left: 10px;
+}
+
+#emailPassword {
+    position: absolute;
+    font: inherit;
+    top: 100px;
+    left: 150px;
+}
+
+#lblSubject {
+    position: absolute;
+    font-size: 18px;
+    top: 100px;
+    left: 360px;
+}
+
+#emailSubject {
+    position: absolute;
+    font: inherit;
+    top: 100px;
+    left: 480px;
+}
+
+#lblEmailMessage {
+    position: absolute;
+    top: 130px;
+    left: 10px;
+    font-size: 18px;
+}
+
+#emailMessageArea {
+    position: absolute;
+    font: inherit;
+    top: 160px;
+    left: 10px;
+    width: 300px;
+    resize: none;
+}
+
+#btnEmailSend {
+    position: absolute;
+    top: 230px;
+    left: 530px;
+    height: 25px;
+    width: 150px;
+    font-size: 18px;
+}
+
+#btnEmailCancel {
+    position: absolute;
+    top: 260px;
+    left: 530px;
+    height: 25px;
+    width: 150px;
+    font-size: 18px;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-to {
+    opacity: 1;
+}
+
+.fade-leave {
+    opacity: 1;
+}
+
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 500ms;
+}
